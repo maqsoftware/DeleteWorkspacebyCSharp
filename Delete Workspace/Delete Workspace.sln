@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 14 for Web
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delete Workspace", "MAQPOCs\Delete Workspace.csproj", "{A0CF8D56-8D4F-4406-8E29-A8EBFCD6A5EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delete Workspace", "Delete Workspace\Delete Workspace.csproj", "{A0CF8D56-8D4F-4406-8E29-A8EBFCD6A5EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
