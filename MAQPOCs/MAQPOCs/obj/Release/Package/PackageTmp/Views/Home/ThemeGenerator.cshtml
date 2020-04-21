@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script src="https://microsoft.github.io/PowerBI-JavaScript/demo/node_modules/jquery/dist/jquery.js"></script>
+    <script src="https://microsoft.github.io/PowerBI-JavaScript/demo/node_modules/powerbi-client/dist/powerbi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.17/js/adal.min.js"></script>
+    <link href="~/Content/ThemeGenerator.css" rel="stylesheet" />
+    <script src="~/Scripts/ThemeGenerator.js?v=1172020"></script>
+    <script type="text/javascript">
+         @{
+            string sAccessToken = Convert.ToString(@Session["AccessToken"]);
+          }
+            var accessToken = '@sAccessToken';
+            if (accessToken || accessToken !== "") {
+                window.accessToken = accessToken;
+            }
+    </script>
+    <img src="https://maqsoftware.com/img/MAQSoftware.png" alt="logo" id="logo" align="top">
+
+    <div class="mainDiv">
+        <div class="left">
+            <p class="header">
+                Generate JSON
+            </p>
+            <div>
+                Theme name: <input type="text" id="themeName"><br /><br />
+                <div class="dataColors">
+                    Data Color: <input type="text" class="themeDataColors" style="margin-left:3%" value="#FFFFFF">
+                    <button id="addButton" type="submit" class=".add_button" onclick="Add()">Add</button><br /><br />
+                </div>
+                Background: <input type="text" id="themeBg" style="margin-left:1.75%" value="#FFFFFF"><br /><br />
+                Foreground: <input type="text" id="themeFg" style="margin-left:2%" value="#FFFFFF"><br /><br />
+                Table Accent: <input type="text" id="themeTa" style="margin-left:1%" value="#FFFFFF"><br /><br />
+                Title font size: <input type="text" id="titleFontSize" style="margin-left:1%" value=""><br /><br />
+                Title font family: <input type="text" id="titleFontFamily" style="margin-left:1%" value=""><br /><br />
+                <button type="submit" id="createJSON" onclick="download()">Download JSON</button>
+            </div>
+        </div>
+        <div class="right">
+            <p class="header">
+                Power BI Embedded Report
+            </p>
+            <div>
+                Report Embed URL <input type="text" name="homepage" id="embedUrl">
+                <button type="submit" id="edit" onclick="Embed()">Embed</button>
+                <button type="submit" onclick="EmbedWithTheme()">Preview</button>
+                <button type="submit" onclick="ApplyAndSave()">Apply and Save</button>
+            </div>
+            <div id="dashboardContainer" style="height:650px; margin-top:10px"></div>
+            <!-- Trigger/Open The Modal -->
+        </div>
+    </div>
+
+
+
+</body>
+</html>

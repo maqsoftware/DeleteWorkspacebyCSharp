@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            border: 3px solid #f1f1f1;
+        }
+
+        input[type=text], input[type=text] {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 25%;
+        }
+
+            button:hover {
+                opacity: 0.8;
+            }
+
+        .content {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="content">
+
+            <form method="get" action="~/Home/EmbeddedCommandsEmbed">
+
+                <div class="container" align="center">
+                    <br>
+                    <label for="reportId"><b>Report ID</b></label>
+                    <input type="text" placeholder="Enter report ID" name="reportId" required>
+                    <br>
+                    <label for="groupId"><b>Group ID</b></label>
+                    <input type="text" placeholder="Enter group ID" name="groupId" required>
+                    <br>
+                    <button type="submit" id="submit">Go</button>
+                    <button type="reset" id="clear">Clear</button>
+                </div>
+            </form>
+        </div>
+    </center>
+</body>
+</html>

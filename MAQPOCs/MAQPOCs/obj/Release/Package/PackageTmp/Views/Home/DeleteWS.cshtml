@@ -1,0 +1,34 @@
+﻿<html>
+<head>
+    <link rel="stylesheet" href="~/Content/DeleteWS.css">
+</head>
+<body>
+    <div id="MAQlogo">
+        <img src="https://maqsoftware.com/img/MAQSoftware.png" alt="logo" align="middle"
+             style="width:250px;height:75px;">
+        <div id="username" style="float:right; padding-top:27px;font-size:18px">
+            @ViewBag.username
+            <a href="~/home/Signout">Sign Out</a>
+        </div>
+    </div>
+    <div id="adminCheck">
+        <input type="radio" id="admin" name="isAdmin" value="true">
+        <label for="admin">Admin</label>
+        <input type="radio" id="notAdmin" name="isAdmin" value="false" checked>
+        <label for="notAdmin">Not Admin</label>
+    </div>
+    
+    <div class="list-groups">
+        <table>
+            <tr>
+                <th>Workspace</th>
+                <th>
+                    Is Empty
+                    <button id="deleteAll">Delete All Empty</button>
+                </th>
+            </tr>
+        </table>
+    </div>
+    <script src="~/Scripts/DeleteWSAPICall.js"></script>
+</body>
+</html>
